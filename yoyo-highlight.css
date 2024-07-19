@@ -1,0 +1,196 @@
+/*! Yoyo Highlight v1.0.0 (https://github.com/smallvi/yoyo_highlight) */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.yoyoHighlight {
+    border-radius: 4px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    box-sizing: border-box;
+}
+
+@keyframes glow {
+    50% {
+        box-shadow: 0 0 40px hsl(12, 100%, 60%);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        border-color: rgba(163, 104, 104, 0.5);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    }
+
+    50% {
+        border-color: rgb(235, 90, 90);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        /* transform: scale(1.1); */
+    }
+
+    100% {
+        border-color: rgba(112, 42, 42, 0.5);
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    }
+}
+
+@keyframes boom-circle {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {}
+}
+
+@keyframes shadowBounce {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes shadowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes shadowSlide {
+    0% {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes shadowFloat {
+    0% {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes multiLayerFloat {
+    0% {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@keyframes multiLayerMove {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(20px) translateY(10px);
+    }
+
+    50% {
+        transform: translateX(-20px) translateY(20px);
+    }
+
+    75% {
+        transform: translateX(10px) translateY(-10px);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes button-shadow-throb {
+    0% {
+        box-shadow:
+            0px 0px 0px 0px #ff000080, /* Ring three - hidden. */
+            0px 0px 0px 0px #ff000080, /* Ring two - hidden. */
+            0px 0px 0px 0px #ff000080  /* Ring one - hidden. */
+        ;
+    }
+    15% {
+        box-shadow:
+            0px 0px 0px 0px #ff000080,
+            0px 0px 0px 0px #ff000080,
+            0px 0px 0px 5px #ff000080  /* Ring one - enter. */
+        ;
+    }
+    30% {
+        box-shadow:
+            0px 0px 0px 0px #ff000080,
+            0px 0px 0px 5px #ff000080, /* Ring two - enter. */
+            0px 0px 0px 10px #ff000040
+        ;
+    }
+    45% {
+        box-shadow:
+            0px 0px 0px 5px #ff000080, /* Ring three - enter. */
+            0px 0px 0px 10px #ff000040,
+            0px 0px 0px 15px #ff000020
+        ;
+    }
+    60% {
+        box-shadow:
+            0px 0px 0px 10px #ff000040,
+            0px 0px 0px 15px #ff000020,
+            0px 0px 15px 15px #ff000000
+        ;
+    }
+    75% {
+        box-shadow:
+            0px 0px 0px 15px #ff000020,
+            0px 0px 15px 15px #ff000000,
+            0px 0px 15px 15px #ff000000
+        ;
+    }
+    90% {
+        box-shadow:
+            0px 0px 15px 15px #ff000000,
+            0px 0px 15px 15px #ff000000,
+            0px 0px 15px 15px #ff000000
+        ;
+    }
+    100% {
+        box-shadow:
+            0px 0px 15px 15px #ff000000,
+            0px 0px 15px 15px #ff000000,
+            0px 0px 15px 15px #ff000000
+        ;
+    }
+}
